@@ -2,7 +2,7 @@
 
 이 그런트 예제는 `grunt 가이드문서` 를 대상으로 만들어진 그런트 예제 템플릿입니다.
 
-그러트를 모르시면 [grunt 가이드 문서](https://github.com/demun/demun.github.com/wiki/01_00_grunt_guide) 를 참고하시기 바랍니다.
+그런트를 모르시면 [grunt 가이드 문서](https://github.com/demun/demun.github.com/wiki/01_00_grunt_guide) 를 참고하시기 바랍니다.
 
 
 ## 설치
@@ -24,6 +24,8 @@ npm install -g grunt-cli
 
 - 3. grunt 모듈 설치
 
+1.2.번을 한적이 있으면 바로 3번부터 시작하면 됩니다.
+
 이 예제의 모듈을 한번에 설치할 수 있습니다.
 
 아래의 코드를 복사해서 콘솔창에 붙여넣고 엔터를 치세요.
@@ -37,14 +39,16 @@ npm i grunt grunt-autoprefixer grunt-concurrent grunt-contrib-clean grunt-contri
 
 설치가 끝났으니 다음의 명령으로 템플릿을 사용할 수 있습니다.
 
+그런트 기본 빌드
+
 ```javascript
-// 둘중 하나를 클릭해서 사용해보세요.
-
-// 그러트 기본 빌드
 grunt
-
-
-// 실시간 동기화
-// grunt serve
 ```
+
+실시간 동기화
+
+```javascript
+grunt serve
+```
+
 
