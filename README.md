@@ -26,12 +26,25 @@ npm install -g grunt-cli
 
 1.2.번을 한적이 있으면 바로 3번부터 시작하면 됩니다.
 
-이 예제의 모듈을 한번에 설치할 수 있습니다.
+모듈을 설치하는 방법은 두가지가 있습니다.
 
-아래의 코드를 복사해서 콘솔창에 붙여넣고 엔터를 치세요.
+- 1. 이전에 만들어졌던 모듈버젼인 'package.json'에 입력되어진 버젼으로 설치하는 방법
+- 2. 현재의 최신버젼으로모듈을 설치하고 'package.json' 에 입력하는 방법
+
+#### 1. 이전에 만들어졌던 모듈버젼인 'package.json'에 입력되어진 버젼으로 설치하는 방법
+
+콘솔에서 다음 명령어를 입력하세요. 그럼 모듈이 설치됩니다.
+
+```sh
+npm install
+```
 
 
-```javascript
+#### 2. 현재의 최신버젼으로모듈을 설치하고 'package.json' 에 입력하는 방법
+
+콘솔에서 아래 명령어를 복사해서 붙여넣고 엔터를 치세요. 그럼 모듈이 설치됩니다.
+
+```sh
 npm i grunt grunt-autoprefixer grunt-concurrent grunt-contrib-clean grunt-contrib-concat grunt-contrib-connect grunt-contrib-copy grunt-contrib-csslint grunt-contrib-cssmin grunt-contrib-imagemin grunt-contrib-jshint grunt-contrib-less grunt-contrib-uglify grunt-contrib-watch grunt-csscomb grunt-htmlhint grunt-includes grunt-newer jshint-stylish load-grunt-tasks time-grunt
 ```
 
@@ -41,13 +54,13 @@ npm i grunt grunt-autoprefixer grunt-concurrent grunt-contrib-clean grunt-contri
 
 그런트 기본 빌드
 
-```javascript
+```sh
 grunt
 ```
 
 실시간 동기화
 
-```javascript
+```sh
 grunt serve
 ```
 

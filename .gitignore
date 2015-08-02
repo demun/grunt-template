@@ -3,12 +3,14 @@
 기획
 디자인
 psd
-working
+.tmp
+.sass-cache
 
 # Folders to ignore
 bower_components
 node_modules
 dist
+dest
 dev
 
 
@@ -26,7 +28,6 @@ _site
 *.swo
 *.swp
 *.vi
-*.zip
 *~
 
 # OS or Editor folders

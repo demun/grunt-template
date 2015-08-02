@@ -42,6 +42,15 @@ module.exports = function(grunt) {
         },
        
 // html task
+        htmlhint: {
+            options: {
+                htmlhintrc: 'grunt/.htmlhintrc'
+            },
+            dist: [
+                'app/docs/html/**/*.html',
+                'app/docs/inclode/**/*.html'
+            ]
+        },
         includes: {
             build: {
                 cwd: 'app/docs/html/',
@@ -53,15 +62,6 @@ module.exports = function(grunt) {
                     includePath: 'app/docs/include/'
                 }
             }
-        },
-        htmlhint: {
-            options: {
-                htmlhintrc: 'gruntConfig/.htmlhintrc'
-            },
-            dist: [
-                'app/docs/html/**/*.html',
-                'app/docs/inclode/**/*.html'
-            ]
         },
 
 // css task
@@ -78,10 +78,10 @@ module.exports = function(grunt) {
 
         csslint: {
             options: {
-                csslintrc: 'gruntConfig/.csslintrc'
+                csslintrc: 'grunt/.csslintrc'
             },
             dist: {
-                src: '<%= less.dist.dest %>'
+                src: 'app/css/style.css'
             }
         },
 
@@ -99,19 +99,18 @@ module.exports = function(grunt) {
                 ]
             },
             dist: { // app -> dest 이동
-                expand: true,
-                cwd: 'app/css/',
-                src: ['*.css',],
-                dest: 'dist/css/'
+                src: 'app/css/style.css',
+                dest: 'dist/css/style.css'
             }
         },
         
         csscomb: {
             options: {
-                config: 'gruntConfig/.csscomb.json'
+                config: 'grunt/.csscomb.json'
             },
-            files: {
-                'dist/css/style.css': ['app/css/style.css'],
+            dist: {
+                src: 'app/css/style.css',
+                dest: 'dist/css/style.css'
             }
         },
 
@@ -133,7 +132,7 @@ module.exports = function(grunt) {
 // javascript task
         jshint: {
             options: {
-                jshintrc: 'gruntConfig/.jshintrc',
+                jshintrc: 'grunt/.jshintrc',
                 force: true, // error 검출시 task를 fail 시키지 않고 계속 진단
                 reporter: require('jshint-stylish') // output을 수정 할 수 있는 옵션
             },
@@ -149,10 +148,10 @@ module.exports = function(grunt) {
         },
 
         concat: {
+            options: {
+                banner: '<%= banner %>'
+            },
             dist: {
-                options: {
-                    banner: '<%= banner %>'
-                },
                 src: 'app/js/site/*.js',
                 dest: 'dist/js/site/site.js'
             }
@@ -163,11 +162,10 @@ module.exports = function(grunt) {
                 banner: '<%= banner %>'
             },
             dist: {
-                src: '<%= concat.dist.dest %>',
+                src: 'dist/js/site/site.js',
                 dest: 'dist/js/site.min.js'
             }
         },
-
 
 // others task
         imagemin: {
@@ -184,7 +182,6 @@ module.exports = function(grunt) {
                 }]
             }
         },
-
         copy: {
             basic: {
                 files: [ 
@@ -195,7 +192,7 @@ module.exports = function(grunt) {
                         src: '**',
                         dest: 'dist/fonts/'
                     },
-                    // js
+                    // js/lib
                     {
                         expand: true,
                         cwd: 'app/js/lib',
@@ -245,6 +242,15 @@ module.exports = function(grunt) {
                 ],
             }
         },
+        concurrent: {
+            options: {
+                logConcurrentOutput: true
+            },
+            dist: [
+                'copy:basic',
+                'imagemin'
+            ]
+        },
 
         // watch task
         watch: {
@@ -283,19 +289,6 @@ module.exports = function(grunt) {
             }
         },
 
-        concurrent: {
-            options: {
-                logConcurrentOutput: true
-            },
-            dist: [
-                'html',
-                'css',
-                'js',
-                'newer:imagemin'
-            ]
-        },
-
-        
     });
 
     
@@ -304,7 +297,6 @@ module.exports = function(grunt) {
         if (target === 'dist') {
             return grunt.task.run(['connect', 'watch']);
         }
-
         grunt.task.run([
             'default', 
             'connect', 
@@ -335,10 +327,12 @@ module.exports = function(grunt) {
             'uglify'
         ]
     );
-    
 
     grunt.registerTask('build', [
             'clean:dev',
+            'html',
+            'css',
+            'js',
             'concurrent',
             'copy'
         ]
@@ -346,8 +340,11 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', [
             'clean:dist',
-            'concurrent',
-            'copy:basic'
+            'html',
+            'css',
+            'js',
+            'concurrent'
+            // 'copy:basic'
         ]
     );
 
