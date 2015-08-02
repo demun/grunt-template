@@ -45,7 +45,7 @@ npm install
 콘솔에서 아래 명령어를 복사해서 붙여넣고 엔터를 치세요. 그럼 모듈이 설치됩니다.
 
 ```sh
-npm i grunt grunt-autoprefixer grunt-concurrent grunt-contrib-clean grunt-contrib-concat grunt-contrib-connect grunt-contrib-copy grunt-contrib-csslint grunt-contrib-cssmin grunt-contrib-imagemin grunt-contrib-jshint grunt-contrib-less grunt-contrib-uglify grunt-contrib-watch grunt-csscomb grunt-htmlhint grunt-includes grunt-newer jshint-stylish load-grunt-tasks time-grunt
+npm install --save-dev grunt grunt-autoprefixer grunt-concurrent grunt-contrib-clean grunt-contrib-concat grunt-contrib-connect grunt-contrib-copy grunt-contrib-csslint grunt-contrib-cssmin grunt-contrib-imagemin grunt-contrib-jshint grunt-contrib-less grunt-contrib-uglify grunt-contrib-watch grunt-csscomb grunt-htmlhint grunt-includes grunt-newer jshint-stylish load-grunt-tasks time-grunt
 ```
 
 - 4. 사용
