@@ -3,7 +3,7 @@
  ======================================================================== 
  * Project   : GruntTemplate(Grunt 를 사용하기 위한 예제 템플릿) v0.0.1
  * Publisher : Ho, Jong-Mun (hjm01@naver.com), (http://demun.tistory.com)
- * Build     : 2015-08-02
+ * Build     : 2015-08-03
  * License   : CC BY-ND (http://creativecommons.org/licenses/by/2.0/kr/)
  ======================================================================== 
  */
@@ -314,4 +314,5 @@ a:focus {
 /* line 34, app\less\site\site1.less */
 .main {
   background-color: #ddd;
+  display: block;
 }

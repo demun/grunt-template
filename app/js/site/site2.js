@@ -3,6 +3,6 @@
  */
 
 (function(){
-	console.log('site2 js');
+	// console.log('site2 js');
 })();
 

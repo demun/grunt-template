@@ -1,35 +1,43 @@
 <!doctype html>
-<!--[if lt IE 7]>     <html lang="ko" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]>        <html lang="ko" class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]>        <html lang="ko" class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="ko" class="no-js"><!--<![endif]-->
+<html lang="ko">
 <head>
-	include "../include/head.html"
-	<title>category1 | page-01</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>test</title>
+	<style type="text/css">
+		.main {
+			display: block;
+		}
+		.main.add {
+			display: inline-block;
+		}
+	</style>
 </head>
 <body>
 
-<header class="header">
-	<div class="wrapper">
-		<h1>header</h1>
-		<div class="download"></div>
-		<div class="user"></div>
-	</div>
-</header>
+<div class="main main-1">main-1</div>
+<div class="main main-2">main-2</div>
+<div class="main main-3">main-3</div>
 
-<section class="main">
-	<div class="wrapper">
-		<h1>main</h1>
-		include "../include/other/lorem.html"
-	</div>
-</section>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.main').on('click', function() {
+			var curClass = $(this).attr('class');
+			console.log(curClass);
+			
+			if ( $(this).css('display') === 'block' ) {
+				// 새로운 클래스로 변경한다
+				$(this).toggleClass('add');
+			} else {
+				$(this).toggleClass('add');
+			}
+		});
+	});
+</script>
 
-<footer>
-	<div class="wrapper">
-		<h1>footer</h1>
-	</div>
-</footer>
-
-include "../include/js.html"
 </body>
 </html>
