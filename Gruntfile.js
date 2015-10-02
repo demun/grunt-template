@@ -153,7 +153,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: 'app/js/site/*.js',
-                dest: 'dist/js/site/site.js'
+                dest: 'dist/js/site.js'
             }
         },
 
@@ -162,7 +162,7 @@ module.exports = function(grunt) {
                 banner: '<%= banner %>'
             },
             dist: {
-                src: 'dist/js/site/site.js',
+                src: 'dist/js/site.js',
                 dest: 'dist/js/site.min.js'
             }
         },
