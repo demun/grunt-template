@@ -4,6 +4,7 @@
 
 (function(){
 	// console.log('site1 js');
+	// alert('fdfddf');
 })();
 
 $(document).ready(function() {
