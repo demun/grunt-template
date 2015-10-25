@@ -316,7 +316,7 @@ a:focus {
   background-color: #ddd;
   display: block;
 }
-/* line 40, app\less\site\site1.less */
+/* line 22, app/less/style.less */
 body {
-  background-color: #ccc;
+  background: red;
 }
