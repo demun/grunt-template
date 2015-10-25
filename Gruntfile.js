@@ -19,38 +19,7 @@ module.exports = function(grunt) {
         ' ======================================================================== \n' +
         ' */\n',
 
-        clean: {
-            dev: {
-                files: [{
-                    dot: true,
-                    src: [
-                        'dev/**/*',
-                        'app/css',
-                        'dist/**/*'
-                    ]
-                }]
-            },
-            dist: {
-                files: [{
-                    dot: true,
-                    src: [
-                        'app/css',
-                        'dist/**/*'
-                    ]
-                }]
-            },
-        },
-       
-// html task
-        htmlhint: {
-            options: {
-                htmlhintrc: 'grunt/.htmlhintrc'
-            },
-            dist: [
-                'app/docs/html/**/*.html',
-                'app/docs/inclode/**/*.html'
-            ]
-        },
+        // html task
         includes: {
             build: {
                 cwd: 'app/docs/html/',
@@ -63,8 +32,14 @@ module.exports = function(grunt) {
                 }
             }
         },
+        htmlhint: {
+            options: {
+                htmlhintrc: 'grunt/.htmlhintrc'
+            },
+            dist: 'dist/**/*.html'
+        },
 
-// css task
+        // css task
         less: {
             dist: {
                 options: {
@@ -129,7 +104,7 @@ module.exports = function(grunt) {
             }
         },
         
-// javascript task
+        // javascript task
         jshint: {
             options: {
                 jshintrc: 'grunt/.jshintrc',
@@ -181,6 +156,27 @@ module.exports = function(grunt) {
                     dest: 'dist/images/'
                 }]
             }
+        },
+        clean: {
+            dev: {
+                files: [{
+                    dot: true,
+                    src: [
+                        'dev/**/*',
+                        'app/css',
+                        'dist/**/*'
+                    ]
+                }]
+            },
+            dist: {
+                files: [{
+                    dot: true,
+                    src: [
+                        'app/css',
+                        'dist/**/*'
+                    ]
+                }]
+            },
         },
         copy: {
             basic: {
