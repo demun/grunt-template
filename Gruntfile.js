@@ -19,27 +19,7 @@ module.exports = function(grunt) {
         ' ======================================================================== \n' +
         ' */\n',
 
-        clean: {
-            dev: {
-                files: [{
-                    dot: true,
-                    src: [
-                        'dev/**/*',
-                        'app/css',
-                        'dist/**/*'
-                    ]
-                }]
-            },
-            dist: {
-                files: [{
-                    dot: true,
-                    src: [
-                        'app/css',
-                        'dist/**/*'
-                    ]
-                }]
-            },
-        },
+        
        
 // html task
         htmlhint: {
@@ -75,6 +55,24 @@ module.exports = function(grunt) {
                 dest: 'app/css/style.css'
             },
         },
+
+        sass: {
+            dist: {
+              files: {
+                'widgets.css': 'test.scss'
+              }
+            }
+          }
+
+        // sass: {                              // Task 
+        //     options: {                       // Target options 
+        //         style: 'expanded'
+        //     },
+        //     dist: {
+        //         src: 'app/sass/test.scss',
+        //         dest: 'app/css/test.css'
+        //     }
+        // },
 
         csslint: {
             options: {
@@ -168,6 +166,27 @@ module.exports = function(grunt) {
         },
 
 // others task
+        clean: {
+            dev: {
+                files: [{
+                    dot: true,
+                    src: [
+                        'dev/**/*',
+                        'app/css',
+                        'dist/**/*'
+                    ]
+                }]
+            },
+            dist: {
+                files: [{
+                    dot: true,
+                    src: [
+                        'app/css',
+                        'dist/**/*'
+                    ]
+                }]
+            },
+        },
         imagemin: {
             options: {
                 title: 'Build complete',  // optional
@@ -284,12 +303,13 @@ module.exports = function(grunt) {
                     livereload: 35729,
                     // keepalive: true,
                     base: 'dist',
-                    open: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>/category1/page-01.html'
+                    open: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>/category1/page-02.html'
                 }
             }
         },
 
     });
+
 
     
     // server
