@@ -142,7 +142,7 @@ module.exports = function(grunt) {
             }
         },
 
-// others task
+        // others task
         imagemin: {
             options: {
                 title: 'Build complete',  // optional
@@ -158,16 +158,6 @@ module.exports = function(grunt) {
             }
         },
         clean: {
-            dev: {
-                files: [{
-                    dot: true,
-                    src: [
-                        'dev/**/*',
-                        'app/css',
-                        'dist/**/*'
-                    ]
-                }]
-            },
             dist: {
                 files: [{
                     dot: true,
@@ -179,7 +169,7 @@ module.exports = function(grunt) {
             },
         },
         copy: {
-            basic: {
+            dist: {
                 files: [ 
                     // fonts
                     {
@@ -196,46 +186,6 @@ module.exports = function(grunt) {
                         dest: 'dist/js/lib'
                     }
                 ]
-            },
-            dev: { // 개발폴더를 위한 복사
-                files: [
-                    { // html folder
-                        expand: true,
-                        cwd: 'app/docs/html/',
-                        src: '**',
-                        dest: 'dev/'
-                    },
-                    { // include folder
-                        expand: true,
-                        cwd: 'app/docs/',
-                        src: ['include/**/*'],
-                        dest: 'dev/'
-                    },
-                    { // css
-                        expand: true,
-                        cwd: 'dist/css/',
-                        src: '**',
-                        dest: 'dev/css/'
-                    },
-                    { // js
-                        expand: true,
-                        cwd: 'dist/js/',
-                        src: '**',
-                        dest: 'dev/js/'
-                    },
-                    { // images
-                        expand: true,
-                        cwd: 'dist/images/',
-                        src: '**',
-                        dest: 'dev/images/'
-                    },
-                    { // fonts
-                        expand: true,
-                        cwd: 'dist/fonts/',
-                        src: '**',
-                        dest: 'dev/fonts/'
-                    }
-                ],
             }
         },
         concurrent: {
@@ -243,7 +193,7 @@ module.exports = function(grunt) {
                 logConcurrentOutput: true
             },
             dist: [
-                'copy:basic',
+                'copy',
                 'imagemin'
             ]
         },
@@ -324,15 +274,6 @@ module.exports = function(grunt) {
         ]
     );
 
-    grunt.registerTask('build', [
-            'clean:dev',
-            'html',
-            'css',
-            'js',
-            'concurrent',
-            'copy'
-        ]
-    );
 
     grunt.registerTask('default', [
             'clean:dist',
@@ -340,7 +281,6 @@ module.exports = function(grunt) {
             'css',
             'js',
             'concurrent'
-            // 'copy:basic'
         ]
     );
 
