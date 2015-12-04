@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         ' ======================================================================== \n' +
         ' */\n',
 
-        // html task
+// html task
         includes: {
             build: {
                 cwd: 'app/docs/html/',
@@ -50,6 +50,24 @@ module.exports = function(grunt) {
                 dest: 'app/css/style.css'
             },
         },
+
+        sass: {
+            dist: {
+              files: {
+                'widgets.css': 'test.scss'
+              }
+            }
+          }
+
+        // sass: {                              // Task 
+        //     options: {                       // Target options 
+        //         style: 'expanded'
+        //     },
+        //     dist: {
+        //         src: 'app/sass/test.scss',
+        //         dest: 'app/css/test.css'
+        //     }
+        // },
 
         csslint: {
             options: {
@@ -230,12 +248,13 @@ module.exports = function(grunt) {
                     livereload: 35729,
                     // keepalive: true,
                     base: 'dist',
-                    open: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>/category1/page-01.html'
+                    open: 'http://<%= connect.server.options.hostname %>:<%= connect.server.options.port %>/category1/page-02.html'
                 }
             }
         },
 
     });
+
 
     
     // server
