@@ -51,13 +51,13 @@ module.exports = function(grunt) {
             },
         },
 
-        sass: {
-            dist: {
-              files: {
-                'widgets.css': 'test.scss'
-              }
-            }
-          }
+        // sass: {
+        //     dist: {
+        //       files: {
+        //         'widgets.css': 'test.scss'
+        //       }
+        //     }
+        //   }
 
         // sass: {                              // Task 
         //     options: {                       // Target options 
@@ -223,22 +223,22 @@ module.exports = function(grunt) {
                 files: ['Gruntfile.js'],
                 tasks: ['newer:jshint:grunt']
             },
-            js: {
-                files: ['app/js/**/*.js'],
-                tasks: ['newer:jshint:dist','concat','uglify']
+            html: {
+                files: ['app/docs/**/*.html'],
+                tasks: ['htmlhint','includes']
             },
             less: {
                 files: ['app/less/**/*.less'],
                 tasks: ['less','csslint','autoprefixer','csscomb','concat']
             },
+            js: {
+                files: ['app/js/**/*.js'],
+                tasks: ['newer:jshint:dist','concat','uglify']
+            },
             img: {
                 files: ['app/images/**/*.{gif,jpeg,jpg,png}'],
                 tasks: ['newer:imagemin']
             },
-            html: {
-                files: ['app/docs/**/*.html'],
-                tasks: ['htmlhint','includes']
-            }
         },
         connect: {
             server: {
@@ -292,7 +292,6 @@ module.exports = function(grunt) {
             'uglify'
         ]
     );
-
 
     grunt.registerTask('default', [
             'clean:dist',
