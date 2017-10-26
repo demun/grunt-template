@@ -3,7 +3,7 @@
  ======================================================================== 
  * Project   : GruntTemplate(Grunt 를 사용하기 위한 예제 템플릿) v0.0.1
  * Publisher : Ho, Jong-Mun (hjm01@naver.com), (http://demun.tistory.com)
- * Build     : 2016-01-16
+ * Build     : 2017-10-26
  * License   : CC BY-ND (http://creativecommons.org/licenses/by/2.0/kr/)
  ======================================================================== 
  */
@@ -263,8 +263,8 @@ body {
   font-family: "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은고딕", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
-  background-color: #ffffff;
+  color: #333;
+  background-color: #fff;
 }
 /* line 27, app\less\common\common.less */
 input,
@@ -277,7 +277,7 @@ textarea {
 }
 /* line 39, app\less\common\common.less */
 a {
-  color: #0066ff;
+  color: #06f;
   text-decoration: none;
 }
 /* line 43, app\less\common\common.less */
