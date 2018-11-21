@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>test</title>
+	<style type="text/css">
+		.main {
+			display: block;
+		}
+		.main.add {
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+<h1>title</h1>
+<div class="main main-1">main-1</div>
+<div class="main main-2">main-2</div>
+<div class="main main-3">main-3</div>
+
+<h1>rirrlwdssss5555</h1>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$('.main').on('click', function() {
+			var curClass = $(this).attr('class');
+			console.log(curClass);
+			
+			if ( $(this).css('display') === 'block' ) {
+				// 새로운 클래스로 변경한다
+				$(this).toggleClass('add');
+			} else {
+				$(this).toggleClass('add');
+			}
+		});
+	});
+</script>
+
+</body>
+</html>

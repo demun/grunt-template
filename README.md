@@ -39,6 +39,8 @@ npm install -g grunt-cli
 npm install
 ```
 
+> npm install 시 오류가 나면 'package-lock.json' 파일을 삭제하고 설치하세요.
+
 
 #### 2. 현재의 최신버젼으로모듈을 설치하고 'package.json' 에 입력하는 방법
 

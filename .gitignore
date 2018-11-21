@@ -9,9 +9,6 @@ psd
 # Folders to ignore
 bower_components
 node_modules
-dist
-dest
-dev
 
 
 # Ignore docs files

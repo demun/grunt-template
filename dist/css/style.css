@@ -11,13 +11,13 @@
 /* line 9, app\less\common\normalize.less */
 html {
   font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
+      -ms-text-size-adjust: 100%;
+  }
 /* line 19, app\less\common\normalize.less */
 body {
   margin: 0;
-}
+  }
 /* line 33, app\less\common\normalize.less */
 article,
 aside,
@@ -33,7 +33,7 @@ nav,
 section,
 summary {
   display: block;
-}
+  }
 /* line 54, app\less\common\normalize.less */
 audio,
 canvas,
@@ -41,90 +41,90 @@ progress,
 video {
   display: inline-block;
   vertical-align: baseline;
-}
+  }
 /* line 67, app\less\common\normalize.less */
 audio:not([controls]) {
   display: none;
   height: 0;
-}
+  }
 /* line 77, app\less\common\normalize.less */
 [hidden],
 template {
   display: none;
-}
+  }
 /* line 89, app\less\common\normalize.less */
 a {
   background-color: transparent;
-}
+  }
 /* line 98, app\less\common\normalize.less */
 a:active,
 a:hover {
   outline: 0;
-}
+  }
 /* line 110, app\less\common\normalize.less */
 abbr[title] {
   border-bottom: 1px dotted;
-}
+  }
 /* line 118, app\less\common\normalize.less */
 b,
 strong {
   font-weight: bold;
-}
+  }
 /* line 127, app\less\common\normalize.less */
 dfn {
   font-style: italic;
-}
+  }
 /* line 136, app\less\common\normalize.less */
 h1 {
+  margin: .67em 0;
   font-size: 2em;
-  margin: 0.67em 0;
-}
+  }
 /* line 145, app\less\common\normalize.less */
 mark {
-  background: #ff0;
   color: #000;
-}
+  background: #ff0;
+  }
 /* line 154, app\less\common\normalize.less */
 small {
   font-size: 80%;
-}
+  }
 /* line 162, app\less\common\normalize.less */
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
-}
+  }
 /* line 170, app\less\common\normalize.less */
 sup {
-  top: -0.5em;
-}
+  top: -.5em;
+  }
 /* line 174, app\less\common\normalize.less */
 sub {
-  bottom: -0.25em;
-}
+  bottom: -.25em;
+  }
 /* line 185, app\less\common\normalize.less */
 img {
   border: 0;
-}
+  }
 /* line 193, app\less\common\normalize.less */
 svg:not(:root) {
   overflow: hidden;
-}
+  }
 /* line 204, app\less\common\normalize.less */
 figure {
   margin: 1em 40px;
-}
+  }
 /* line 212, app\less\common\normalize.less */
 hr {
-  box-sizing: content-box;
   height: 0;
-}
+  box-sizing: content-box;
+  }
 /* line 221, app\less\common\normalize.less */
 pre {
   overflow: auto;
-}
+  }
 /* line 229, app\less\common\normalize.less */
 code,
 kbd,
@@ -132,26 +132,26 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
-}
+  }
 /* line 252, app\less\common\normalize.less */
 button,
 input,
 optgroup,
 select,
 textarea {
-  color: inherit;
-  font: inherit;
   margin: 0;
-}
+  font: inherit;
+  color: inherit;
+  }
 /* line 266, app\less\common\normalize.less */
 button {
   overflow: visible;
-}
+  }
 /* line 277, app\less\common\normalize.less */
 button,
 select {
   text-transform: none;
-}
+  }
 /* line 290, app\less\common\normalize.less */
 button,
 html input[type="button"],
@@ -159,93 +159,96 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-}
+  }
 /* line 302, app\less\common\normalize.less */
 button[disabled],
 html input[disabled] {
   cursor: default;
-}
+  }
 /* line 311, app\less\common\normalize.less */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-  border: 0;
   padding: 0;
-}
+  border: 0;
+  }
 /* line 322, app\less\common\normalize.less */
 input {
   line-height: normal;
-}
+  }
 /* line 334, app\less\common\normalize.less */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
-}
+  }
 /* line 346, app\less\common\normalize.less */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
-}
+  }
 /* line 356, app\less\common\normalize.less */
 input[type="search"] {
-  -webkit-appearance: textfield;
   box-sizing: content-box;
-}
+  -webkit-appearance: textfield;
+  }
 /* line 367, app\less\common\normalize.less */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
-}
+  }
 /* line 376, app\less\common\normalize.less */
 fieldset {
-  border: 1px solid #c0c0c0;
+  padding: .35em .625em .75em;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
+  border: 1px solid #c0c0c0;
+  }
 /* line 387, app\less\common\normalize.less */
 legend {
-  border: 0;
   padding: 0;
-}
+  border: 0;
+  }
 /* line 396, app\less\common\normalize.less */
 textarea {
   overflow: auto;
-}
+  }
 /* line 405, app\less\common\normalize.less */
 optgroup {
   font-weight: bold;
-}
+  }
 /* line 416, app\less\common\normalize.less */
 table {
-  border-collapse: collapse;
   border-spacing: 0;
-}
+  border-collapse: collapse;
+  }
 /* line 421, app\less\common\normalize.less */
 td,
 th {
   padding: 0;
-}
+  }
 @font-face {
   font-family: 'Nanum Gothic';
   font-style: normal;
   font-weight: 400;
+
   src: url('../fonts/NanumGothic-Regular.eot');
   src: url('../fonts/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NanumGothic-Regular.woff2') format('woff2'), url('../fonts/NanumGothic-Regular.woff') format('woff'), url('../fonts/NanumGothic-Regular.ttf') format('truetype');
-}
+  }
 @font-face {
   font-family: 'Nanum Gothic';
   font-style: normal;
   font-weight: 700;
+
   src: url('../fonts/NanumGothic-Bold.eot');
   src: url('../fonts/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/NanumGothic-Bold.woff2') format('woff2'), url('../fonts/NanumGothic-Bold.woff') format('woff'), url('../fonts/NanumGothic-Bold.ttf') format('truetype');
-}
+  }
 @font-face {
   font-family: 'Nanum Gothic';
   font-style: normal;
   font-weight: 800;
+
   src: url('../fonts/NanumGothic-ExtraBold.eot');
   src: url('../fonts/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../fonts/NanumGothic-ExtraBold.woff2') format('woff2'), url('../fonts/NanumGothic-ExtraBold.woff') format('woff'), url('../fonts/NanumGothic-ExtraBold.ttf') format('truetype');
-}
+  }
 /* 
 ---------------------------------------------------------------
 *
@@ -256,8 +259,9 @@ th {
 /* line 13, app\less\common\common.less */
 html {
   font-size: 10px;
+
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+  }
 /* line 18, app\less\common\common.less */
 body {
   font-family: "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은고딕", Helvetica, Arial, sans-serif;
@@ -265,7 +269,7 @@ body {
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
-}
+  }
 /* line 27, app\less\common\common.less */
 input,
 button,
@@ -274,17 +278,17 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
-}
+  }
 /* line 39, app\less\common\common.less */
 a {
   color: #06f;
   text-decoration: none;
-}
+  }
 /* line 43, app\less\common\common.less */
 a:hover,
 a:focus {
   color: #005ce6;
-}
+  }
 /* 
 ---------------------------------------------------------------
 *
@@ -296,27 +300,27 @@ a:focus {
 .wrapper {
   width: 900px;
   margin: 30px auto;
-}
+  }
 /* line 19, app\less\site\site1.less */
 .user {
-  background: url('../images/user.png') no-repeat;
+  display: inline-block;
   width: 25px;
   height: 32px;
-  display: inline-block;
-}
+  background: url('../images/user.png') no-repeat;
+  }
 /* line 25, app\less\site\site1.less */
 .download {
-  background: url('../images/download.png') no-repeat;
+  display: inline-block;
   width: 25px;
   height: 32px;
-  display: inline-block;
-}
+  background: url('../images/download.png') no-repeat;
+  }
 /* line 34, app\less\site\site1.less */
 .main {
-  background-color: #ddd;
   display: block;
-}
+  background-color: #ddd;
+  }
 /* line 22, app/less/style.less */
 body {
   background: red;
-}
+  }
